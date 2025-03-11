@@ -5,20 +5,20 @@
 class Llma < Formula
   desc "LLMariner transforms your GPU clusters into a powerhouse for generative AI workloads."
   homepage "https://llmariner.ai"
-  version "1.23.1"
+  version "1.24.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.23.1/llmariner_Darwin_x86_64.tar.gz"
-      sha256 "34256751d22816ba721a35a0f27463740bf182b1f2b3dd46bedb730c6022d424"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.24.0/llmariner_Darwin_x86_64.tar.gz"
+      sha256 "b2a9865f0275dec7629a280f79e394c0d011db261642408c178e8c116ef8b26b"
 
       def install
         bin.install "llma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.23.1/llmariner_Darwin_arm64.tar.gz"
-      sha256 "f89b380b49aac60ddab208cfe5b0080bdbd51987d60a6416ae45980a3c49278d"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.24.0/llmariner_Darwin_arm64.tar.gz"
+      sha256 "4023db38d41f22adb6cdb369cb8acd4508171cc72d9308b4e23ec6ce264783f2"
 
       def install
         bin.install "llma"
@@ -29,8 +29,8 @@ class Llma < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/llmariner/llmariner/releases/download/v1.23.1/llmariner_Linux_x86_64.tar.gz"
-        sha256 "aeb908ed2b8d091cb9a5eec3b88757b8f519f46aa7e6f846936ac132c76c75b6"
+        url "https://github.com/llmariner/llmariner/releases/download/v1.24.0/llmariner_Linux_x86_64.tar.gz"
+        sha256 "4a95afe32c823ca0aacd3aa1e12b14f64a947001b4f132e694abc639c1d382fe"
 
         def install
           bin.install "llma"
@@ -39,8 +39,8 @@ class Llma < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/llmariner/llmariner/releases/download/v1.23.1/llmariner_Linux_arm64.tar.gz"
-        sha256 "df01b00746931498ed45092f37db3008ce33254e1c74d578a6c120ec5ac344e1"
+        url "https://github.com/llmariner/llmariner/releases/download/v1.24.0/llmariner_Linux_arm64.tar.gz"
+        sha256 "b942d79d35573f337ad86898ad281d774860a6afb36777ad7ca9da4878551a92"
 
         def install
           bin.install "llma"
