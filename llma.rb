@@ -5,20 +5,20 @@
 class Llma < Formula
   desc "LLMariner transforms your GPU clusters into a powerhouse for generative AI workloads."
   homepage "https://llmariner.ai"
-  version "1.35.0"
+  version "1.36.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.35.0/llmariner_Darwin_x86_64.tar.gz"
-      sha256 "b59c346a9cc86cea60da7a23ca2589ddb294ab38a2ae671838bed347a72a51a0"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.36.0/llmariner_Darwin_x86_64.tar.gz"
+      sha256 "84eaacdbdbd08a6525a2fd07f2a2ac4d1ba14c0ad509c9e3ea5b1562071efc2f"
 
       def install
         bin.install "llma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.35.0/llmariner_Darwin_arm64.tar.gz"
-      sha256 "a0367e3deb766e0cbd80ad2ffa06de5d3a20d2b47647f057215885ee43cb08dc"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.36.0/llmariner_Darwin_arm64.tar.gz"
+      sha256 "dd93b6683035e534211d500720f0e1e5bf8a822b1d6309a9b3bbf9cffa96d361"
 
       def install
         bin.install "llma"
@@ -28,15 +28,15 @@ class Llma < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.35.0/llmariner_Linux_x86_64.tar.gz"
-      sha256 "047cd9a53f26a4e3697df4f26379d423cec06f5af6e20d434b777f4180db7f5d"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.36.0/llmariner_Linux_x86_64.tar.gz"
+      sha256 "f125e761e0182834c46ff28481eb68e04fac134cd6508841db7a2aa186f2a66f"
       def install
         bin.install "llma"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.35.0/llmariner_Linux_arm64.tar.gz"
-      sha256 "ce20a6fc0d6620fae15f4f3328e5435daf54b26287cbb3177e73b1b8d1509e79"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.36.0/llmariner_Linux_arm64.tar.gz"
+      sha256 "61033b785280af2fe05c6559e9804591159deb70399ca11a7776f6734d6d8c9a"
       def install
         bin.install "llma"
       end
