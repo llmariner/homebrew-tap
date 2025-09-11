@@ -5,20 +5,20 @@
 class Llma < Formula
   desc "LLMariner transforms your GPU clusters into a powerhouse for generative AI workloads."
   homepage "https://llmariner.ai"
-  version "1.49.0"
+  version "1.50.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.49.0/llmariner_Darwin_x86_64.tar.gz"
-      sha256 "fd392e9dfa00747807f639e80408c4a73cdea7bee7de9a75ea46798869005dcf"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.50.0/llmariner_Darwin_x86_64.tar.gz"
+      sha256 "35d38e538a97cbd50e88a3c335293b1add0f54c30b1703f3f69c2c1dbf5225a1"
 
       def install
         bin.install "llma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.49.0/llmariner_Darwin_arm64.tar.gz"
-      sha256 "6e1af95ab5f87ece5d1b68d41c7a30bf855977c1cc82d289cdb0692e7cd482fa"
+      url "https://github.com/llmariner/llmariner/releases/download/v1.50.0/llmariner_Darwin_arm64.tar.gz"
+      sha256 "145ba2768d9349bc9794b0b99d027ea0ad735b22d1c4e7b56942875944b5f92d"
 
       def install
         bin.install "llma"
@@ -27,16 +27,16 @@ class Llma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.49.0/llmariner_Linux_x86_64.tar.gz"
-      sha256 "ba9ff7cf18ec8f4033ff3ea1bfb8e71be76a526a9509b3d35326a51f438bd8c0"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/llmariner/llmariner/releases/download/v1.50.0/llmariner_Linux_x86_64.tar.gz"
+      sha256 "843e3e4e3dc9896e41c615ecff10103440a044f2fdd170f29a86990e3d2c7e99"
       def install
         bin.install "llma"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/llmariner/llmariner/releases/download/v1.49.0/llmariner_Linux_arm64.tar.gz"
-      sha256 "b981d1a6274c4ea692eb53bc533fc93457bbb8e2e7c36f18aaf51b0ccb301fb9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/llmariner/llmariner/releases/download/v1.50.0/llmariner_Linux_arm64.tar.gz"
+      sha256 "3eabe469d29bdaec224f29921ca14eec6fc2d29014f49e96cba309a743f1792c"
       def install
         bin.install "llma"
       end
